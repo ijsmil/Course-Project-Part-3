@@ -53,28 +53,9 @@ def printinfo(DetailsPrinted):
             checkdate = datetime.strptime(startdate, "%m/%d/%Y")
             if (checkdate < rundate):
 
-                continue
+             continue
         enddate = EmpList[1]
         name = EmpList[2]
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         hours = float(EmpList[3])
         hourlyrate = float(EmpList[4])
         taxrate = float(EmpList[5])
@@ -90,7 +71,7 @@ def printinfo(DetailsPrinted):
         EmpTotals["TotalGrossPay"] = TotalGrossPay
         EmpTotals["TotalTax"] = TotalTax
         EmpTotals["TotalNetPay"] = TotalNetPay
-        DetailPrinted = True
+        DetailsPrinted = True
     if (DetailsPrinted): # skip of no detail lines printed
         PrintTotals (EmpTotals)
     else:
